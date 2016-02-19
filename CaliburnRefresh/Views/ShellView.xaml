@@ -1,0 +1,54 @@
+﻿<Window x:Class="CaliburnRefresh.Views.ShellView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:cal="clr-namespace:Caliburn.Micro;assembly=Caliburn.Micro.Platform"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+		
+
+        xmlns:local="clr-namespace:CaliburnRefresh.Views"
+        mc:Ignorable="d"
+        Title="ShellView" Height="628" Width="707">
+    <Grid Margin="0,0,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="115*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <Button x:Name="Kunden" Content="Kunden"/>
+            <Button x:Name="Termine" Content="Termine"/>
+        </StackPanel>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="63*"/>
+                <RowDefinition Height="156*"/>
+                <RowDefinition Height="172*"/>
+            </Grid.RowDefinitions>
+            <DockPanel Grid.Row="1">
+                <Button x:Name="OpenTab"
+                Content="Open Tab" 
+                DockPanel.Dock="Top" />
+                <TabControl x:Name="Items">
+                    <TabControl.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding DisplayName}" />
+                                <Button Content="X"
+                                 cal:Message.Attach="CloseItem($dataContext)"  />
+                            </StackPanel>
+                        </DataTemplate>
+                    </TabControl.ItemTemplate>
+                </TabControl>
+            </DockPanel>
+
+            <StackPanel Grid.Row="2">
+                <Button Content="Test"/>
+                <ContentControl Grid.Row="2" x:Name="ActiveItem" Background="Aqua"/>
+            </StackPanel>
+
+        </Grid>
+
+
+    </Grid>
+</Window>
