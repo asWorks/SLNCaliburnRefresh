@@ -9,7 +9,7 @@ namespace CaliburnRefresh.Events
     public class EventMessage
     {
         /// <summary>
-        /// Neuer Test
+        /// Test
         /// </summary>
         public string Message { get; set; }
         public EventMessage(string message)
