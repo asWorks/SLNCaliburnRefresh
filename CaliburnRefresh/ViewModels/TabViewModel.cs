@@ -1,13 +1,21 @@
 ﻿using Caliburn.Micro;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CaliburnRefresh.ViewModels
 {
-    public class TabViewModel:Screen
+    public class TabViewModel : Screen
     {
+
+        public bool CanControlClose { get; set; }
+        public string Caption { get; set; }
+        public string Note { get; set; }
+
+        public override void CanClose(Action<bool> callback)
+        {
+
+            base.CanClose(callback);
+            callback(CanControlClose);
+        }
+
     }
 }

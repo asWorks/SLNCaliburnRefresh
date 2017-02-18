@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using CaliburnRefresh.Events;
 using System.ComponentModel.Composition;
 using CaliburnRefresh.ViewModels;
-using CaliburnRefresh.Interfaces;
+
 
 
 

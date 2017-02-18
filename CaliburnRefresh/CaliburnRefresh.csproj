@@ -98,20 +98,39 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="AppBootstrapper.cs" />
+    <Compile Include="AutoMapperHelper.cs" />
     <Compile Include="Events\EventMessage.cs" />
     <Compile Include="Interfaces\IKundenViewModel.cs" />
     <Compile Include="Interfaces\IShellViewModel.cs" />
     <Compile Include="Interfaces\ITermineViewModel.cs" />
+    <Compile Include="Models\HeaderModel.cs" />
+    <Compile Include="ViewModels\BodyViewModel.cs" />
+    <Compile Include="ViewModels\HeaderBaseViewModel.cs" />
+    <Compile Include="ViewModels\HeaderNumberOneViewModel.cs" />
+    <Compile Include="ViewModels\HeaderNumberTwoViewModel.cs" />
     <Compile Include="ViewModels\KundenViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
+    <Compile Include="ViewModels\TabsViewModel.cs" />
     <Compile Include="ViewModels\TabViewModel.cs" />
     <Compile Include="ViewModels\TermineViewModel.cs" />
     <Compile Include="ViewModels\TestViewModel.cs" />
+    <Compile Include="Views\BodyView.xaml.cs">
+      <DependentUpon>BodyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HeaderNumberOneView.xaml.cs">
+      <DependentUpon>HeaderNumberOneView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HeaderNumberTwoView.xaml.cs">
+      <DependentUpon>HeaderNumberTwoView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\KundenView.xaml.cs">
       <DependentUpon>KundenView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ShellView.xaml.cs">
       <DependentUpon>ShellView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TabsView.xaml.cs">
+      <DependentUpon>TabsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\TabView.xaml.cs">
       <DependentUpon>TabView.xaml</DependentUpon>
@@ -153,11 +172,27 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Page Include="Views\BodyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\HeaderNumberOneView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\HeaderNumberTwoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\KundenView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\ShellView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TabsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
